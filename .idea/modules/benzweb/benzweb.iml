@@ -7,12 +7,22 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../../benzweb/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/../../../benzweb/src/main/webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/../../../benzweb/src/main/webapp" relative="/benzweb" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../../benzweb/src/main/resources" />
           <root url="file://$MODULE_DIR$/../../../benzweb/src/main/java" />
+          <root url="file://$MODULE_DIR$/../../../benzweb/src/main/resources" />
         </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/../../../benzweb/src/main/resources/spring/ApplicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context mvc" removed="false">
+          <file>file://$MODULE_DIR$/../../../benzweb/src/main/resources/spring/ApplicationContext-mvc.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
