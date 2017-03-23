@@ -1,0 +1,2 @@
+rootProject.name = 'benzrepo'
+include 'benzcore','benzweb'

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/benzcore/benzcore.iml" filepath="$PROJECT_DIR$/.idea/modules/benzcore/benzcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/benzrepo.iml" filepath="$PROJECT_DIR$/.idea/modules/benzrepo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/benzweb/benzweb.iml" filepath="$PROJECT_DIR$/.idea/modules/benzweb/benzweb.iml" />
+    </modules>
+  </component>
+</project>

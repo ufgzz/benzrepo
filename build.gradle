@@ -1,0 +1,101 @@
+/**
+ *  Settings
+ */
+ext {
+    project_jdk = '1.8'
+    project_web = '3.1'
+}
+
+apply plugin: 'idea'
+
+/**
+ *  引入jar包定义
+ *  这个文件中定义的jar包可以直接在子项目中使用，不需要再次使用 apply from 这个语句
+ */
+apply from: 'dependency.gradle'
+
+
+/**
+ *  所有子项目的通用配置
+ */
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    // 这儿置为空值，否则 idea 生成的依赖包命名以此值开始
+    group = ""
+    // JVM 版本号要求
+    sourceCompatibility = project_jdk
+    targetCompatibility = project_jdk
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    jar {
+        manifest {
+            attributes("Implementation-Title": "Gradle")
+        }
+    }
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+
+    configurations {
+        // 所有需要忽略的包定义在此
+        all*.exclude group: 'commons-httpclient'
+        all*.exclude group: 'commons-logging'
+        all*.exclude group: 'commons-beanutils', module: 'commons-beanutils'
+    }
+
+    dependencies {
+        // 通用依赖
+        compile(
+                libraries.'junit',
+                libraries.'log4j',
+                libraries.'slf4j-log4j12',
+
+                libraries.'spring-aop',
+                libraries.'spring-aspects',
+                libraries.'spring-beans',
+                libraries.'spring-context',
+                libraries.'spring-context-support',
+                libraries.'spring-core',
+                libraries.'spring-orm',
+                libraries.'spring-test',
+                libraries.'spring-tx',
+                libraries.'spring-web',
+                libraries.'spring-webmvc',
+
+                libraries.'mybatis',
+                libraries.'mybatis-spring',
+                libraries.'mybatis-paginator',
+
+                libraries.'mysql-connector-java',
+                libraries.'druid',
+
+                libraries.'jackson-core',
+                libraries.'jackson-databind',
+                libraries.'jackson-annotations'
+
+        )
+
+        // 依赖maven中不存在的jar
+        ext.jarTree = fileTree(dir: 'libs', include: '**/*.jar')
+        ext.rootProjectLibs = new File(rootProject.rootDir, 'libs').getAbsolutePath()
+        ext.jarTree += fileTree(dir: rootProjectLibs, include: '**/*.jar')
+
+        compile jarTree
+
+        // 测试依赖
+        testCompile(
+                libraries.'spring-test',
+                libraries.'junit'
+        )
+    }
+
+}
+
