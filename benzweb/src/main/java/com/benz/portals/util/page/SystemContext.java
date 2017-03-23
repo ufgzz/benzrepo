@@ -80,15 +80,14 @@ public class SystemContext {
 	}
 	
 	
-	public static void systemContextPrint() {
+	public static String systemContextPrint() {
 		
-		System.out.println(
-				"pageSize : " + String.valueOf(pageSize.get()) + 
-				", pageOffset : " + String.valueOf(pageOffset.get()) + 
+		return
+				"pageSize : " + String.valueOf(pageSize.get()) +
+				", pageOffset : " + String.valueOf(pageOffset.get()) +
 				", sort : " + sort.get() +
 				", order : " + order.get() +
-				", realPath : " + realPath.get()
-				);
+				", realPath : " + realPath.get();
 		
 	}
 	

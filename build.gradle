@@ -57,8 +57,12 @@ subprojects {
         // 通用依赖
         compile(
                 libraries.'junit',
-                libraries.'slf4j-log4j12',
                 libraries.'slf4j-api',
+                libraries.'jcl-over-slf4j',
+                libraries.'logback-classic',
+                libraries.'logback-core',
+                libraries.'logback-ext-spring',
+
 
                 libraries.'spring-aop',
                 libraries.'spring-aspects',

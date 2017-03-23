@@ -5,7 +5,8 @@ ext.versions = [
 		jackson: '2.7.0',
 		lucene: '4.10.1',
 		junit: '4.8.2',
-		slf4j: '1.7.21'
+		slf4j: '1.7.21',
+		logback: '1.2.2'
 ]
 
 ext.libraries = [
@@ -58,6 +59,10 @@ ext.libraries = [
 		"slf4j-api": "org.slf4j:slf4j-api:${versions.slf4j}",
 		"slf4j-nop": "org.slf4j:slf4j-nop:${versions.slf4j}",
 		"log4j": "log4j:log4j:1.2.17",
+		"logback-classic": "ch.qos.logback:logback-classic:${versions.logback}",
+		"logback-core": "ch.qos.logback:logback-core:${versions.logback}",
+		"logback-ext-spring": "org.logback-extensions:logback-ext-spring:0.1.1",
+
 
 		//	mybatis
 		//

@@ -1,6 +1,9 @@
 package com.benz.portals.web;
 
+import com.benz.portals.controller.AdminController;
 import com.benz.portals.util.page.SystemContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +19,9 @@ import java.io.IOException;
  * @see 	 
  */
 public class SystemContextFilter implements Filter {
-	
+
+	private static final Logger logger = LoggerFactory.getLogger(SystemContextFilter.class);
+
 	private Integer pageSize;
 
 	@Override
@@ -42,8 +47,8 @@ public class SystemContextFilter implements Filter {
 			SystemContext.setPageOffset(offset);
 			SystemContext.setPageSize(pageSize);
 			SystemContext.setRealPath(((HttpServletRequest)request).getSession().getServletContext().getRealPath("/"));
-			
-			SystemContext.systemContextPrint();
+
+			logger.info(SystemContext.systemContextPrint());
 			
 			chain.doFilter(request,response);
 		} finally {
