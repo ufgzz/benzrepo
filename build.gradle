@@ -55,8 +55,8 @@ subprojects {
         // 通用依赖
         compile(
                 libraries.'junit',
-                libraries.'log4j',
                 libraries.'slf4j-log4j12',
+                libraries.'slf4j-api',
 
                 libraries.'spring-aop',
                 libraries.'spring-aspects',
