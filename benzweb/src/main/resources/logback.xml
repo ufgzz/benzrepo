@@ -23,14 +23,14 @@
     </appender>
 
     <!--配置DBAppender实例-->
-    <appender name="db" class="ch.qos.logback.classic.db.DBAppender">
+    <!--<appender name="db" class="ch.qos.logback.classic.db.DBAppender">
         <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
             <driverClass>${driverClass}</driverClass>
             <url>${dbUrl}</url>
             <user>${dbUser}</user>
             <password>${dbPassword}</password>
         </connectionSource>
-    </appender>
+    </appender>-->
 
     <!--可以通过<logger>标签，改变指定的Logger实例的Level值和绑定的Appender-->
     <logger name="com.benz.portals" level="debug" additivitt="true"/>
