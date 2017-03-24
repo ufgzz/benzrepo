@@ -61,6 +61,7 @@ ext.libraries = [
 		"log4j": "log4j:log4j:1.2.17",
 		"logback-classic": "ch.qos.logback:logback-classic:${versions.logback}",
 		"logback-core": "ch.qos.logback:logback-core:${versions.logback}",
+		"logback-access": "ch.qos.logback:logback-access:${versions.logback}",
 		"logback-ext-spring": "org.logback-extensions:logback-ext-spring:0.1.1",
 
 

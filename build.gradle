@@ -59,10 +59,10 @@ subprojects {
                 libraries.'junit',
                 libraries.'slf4j-api',
                 libraries.'jcl-over-slf4j',
-                libraries.'logback-classic',
                 libraries.'logback-core',
+                libraries.'logback-classic',
+                libraries.'logback-access',
                 libraries.'logback-ext-spring',
-
 
                 libraries.'spring-aop',
                 libraries.'spring-aspects',
