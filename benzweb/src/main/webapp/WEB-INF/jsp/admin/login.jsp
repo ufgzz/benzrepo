@@ -14,8 +14,8 @@
 						<div class="center">
 							<h1>
 								<i class="ace-icon fa fa-leaf green"></i>
-								<span class="red">Cat&Dog</span>
-								<span class="white" id="id-text2">应用</span>
+								<span class="red">Dog&Cat</span>
+								<span class="white" id="id-text2">System</span>
 							</h1>
 							<h4 class="blue" id="id-company-text">&copy; 星禾</h4>
 						</div>
@@ -43,13 +43,19 @@
 														<i class="ace-icon fa fa-lock"></i>
 													</span>
 												</label>
+												<label class="block clearfix">
+													<span class="block input-icon input-icon-right">
+														<input type="password" class="form-control" placeholder="验证码" name="checkCode"/>
+                                                        <span style="cursor:pointer"> <img src="drawCheckCode" onclick="reCheckCode(this)" /></span>
+													</span>
+												</label>
 												<div class="space"></div>
 												<div class="clearfix">
 													<label class="inline">
 														<input type="checkbox" class="ace" />
 														<span class="lbl">记住我</span>
 													</label>
-													<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+													<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 														<i class="ace-icon fa fa-key"></i>
 														<span class="bigger-110">登录</span>
 													</button>
@@ -217,7 +223,7 @@
 	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/core/jquery.cms.validate.js"></script>	
 	<script type="text/javascript">
 		$(function() {
-			
+
 			$("#myForm").cmsvalidate();
 
 			//
