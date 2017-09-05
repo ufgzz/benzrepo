@@ -94,4 +94,13 @@ ext.libraries = [
         "commons-lang": "commons-lang:commons-lang:2.6",
         "commons-digester3": "org.apache.commons:commons-digester3:3.2",
 
+		//retrofit2
+
+		// Retrofit库
+		"retrofit2" : "com.squareup.retrofit2:retrofit:2.0.2",
+		// OkHttp库
+		"okhttp3" : "com.squareup.okhttp3:okhttp:3.1.2",
+		"retrofit2-gson" : "com.squareup.retrofit2:converter-gson:2.0.2",
+		"retrofit2-jackson" : "com.squareup.retrofit2:converter-jackson:2.0.2"
+
 ]

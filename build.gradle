@@ -85,7 +85,12 @@ subprojects {
 
                 libraries.'jackson-core',
                 libraries.'jackson-databind',
-                libraries.'jackson-annotations'
+                libraries.'jackson-annotations',
+
+                libraries.'retrofit2',
+                libraries.'okhttp3',
+                libraries.'retrofit2-gson',
+                libraries.'retrofit2-jackson'
 
         )
 
